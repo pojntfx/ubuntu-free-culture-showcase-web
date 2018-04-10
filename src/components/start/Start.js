@@ -4,7 +4,7 @@ import { SearchBox } from "./SearchBox";
 import { StartHeader } from "./StartHeader";
 import screenshot from "../../assets/screenshot-laptop-header.png";
 import bionicWallpaper from "../../assets/ubuntu-bionic-wallpaper.jpg";
-import { ImageCollection } from "./ImageCollection";
+import { FeedCollection } from "./FeedCollection";
 
 export const Start = () => (
   <DefaultLayout
@@ -21,6 +21,6 @@ export const Start = () => (
     }
   >
     <SearchBox />
-    <ImageCollection />
+    <FeedCollection />
   </DefaultLayout>
 );
