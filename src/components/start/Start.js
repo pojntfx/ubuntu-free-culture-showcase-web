@@ -1,25 +1,26 @@
 import React from "react";
 import { DefaultLayout } from "../../layouts/DefaultLayout";
 import { SearchBox } from "./SearchBox";
+import { StartHeader } from "./StartHeader";
+import screenshot from "../../assets/screenshot-laptop-header.png";
+import bionicWallpaper from "../../assets/ubuntu-bionic-wallpaper.jpg";
+import { ImageCollection } from "./ImageCollection";
 
 export const Start = () => (
-  <DefaultLayout>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
-      incidunt iure soluta odio libero atque beatae delectus aliquam explicabo
-      exercitationem cupiditate expedita est doloremque perspiciatis sunt
-      architecto dolore, ipsum, asperiores obcaecati voluptas quam eius
-      praesentium fugiat! Facere doloremque cumque exercitationem aut nobis
-      dignissimos nemo corrupti accusamus numquam, minus consectetur molestias.
-    </p>
+  <DefaultLayout
+    header={
+      <StartHeader
+        mainImgSrc={bionicWallpaper}
+        title="Ubuntu 18.10 Wallpaper Contest"
+        subTitle="1 - 29 September 2018"
+        description="Share your images with millions of Ubuntu users and get them distributed with Ubuntu."
+        buttonText="Upload your image"
+        secondaryImgSrc={screenshot}
+        secondaryImgAlt="Ubuntu devices infographic"
+      />
+    }
+  >
     <SearchBox />
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
-      aspernatur beatae assumenda id! Facere aut, aspernatur incidunt nam
-      pariatur dolorem quisquam laboriosam. Reprehenderit suscipit accusamus
-      vero porro deleniti quaerat, incidunt hic iusto numquam id veritatis fugit
-      perferendis aliquid beatae repellendus quia, aspernatur expedita nam
-      consequuntur quidem earum pariatur accusantium error!
-    </p>
+    <ImageCollection />
   </DefaultLayout>
 );
