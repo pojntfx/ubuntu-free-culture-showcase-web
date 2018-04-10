@@ -1,0 +1,42 @@
+{
+  "name": "ubuntu-free-culture-showcase-frontend-web",
+  "version": "0.0.1-alpha",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description":
+    "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url":
+      "git+https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web.git"
+  },
+  "keywords": [
+    "ubuntu",
+    "culture",
+    "wallpaper",
+    "photography",
+    "music",
+    "video"
+  ],
+  "author": "Felicitas Pojtinger",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url":
+      "https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web/issues"
+  },
+  "homepage":
+    "https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web#readme"
+}
