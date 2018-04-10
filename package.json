@@ -18,21 +18,19 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-css":
-      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o public/",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o public/ --watch --recursive"
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o public/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o public/ --watch --recursive"
   },
-  "description":
-    "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "devDependencies": {
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "prop-types": "^15.6.1",
+    "styled-components": "^3.2.5"
   },
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web.git"
+    "url": "git+https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web.git"
   },
   "keywords": [
     "ubuntu",
@@ -45,9 +43,7 @@
   "author": "Felicitas Pojtinger",
   "license": "GPL-3.0",
   "bugs": {
-    "url":
-      "https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web/issues"
+    "url": "https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web/issues"
   },
-  "homepage":
-    "https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web#readme"
+  "homepage": "https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web#readme"
 }

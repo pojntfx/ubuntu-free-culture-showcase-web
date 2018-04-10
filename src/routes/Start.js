@@ -1,3 +1,4 @@
 import React from "react";
+import { Start as StartPage } from "../components/start/Start";
 
-export const Start = () => <h1>Start</h1>;
+export const Start = () => <StartPage />;
