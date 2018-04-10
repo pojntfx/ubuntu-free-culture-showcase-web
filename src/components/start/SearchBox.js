@@ -9,9 +9,9 @@ export const SearchBox = () => (
       placeholder="Search"
       required=""
     />
-    <button type="reset" className="p-search-box__reset" alt="reset">
+    {/* <button type="reset" className="p-search-box__reset" alt="reset">
       <i className="p-icon--close" />
-    </button>
+    </button> */}
     <button type="submit" className="p-search-box__button" alt="search">
       <i className="p-icon--search" />
     </button>
