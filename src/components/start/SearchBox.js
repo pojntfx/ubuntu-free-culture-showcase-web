@@ -1,7 +1,8 @@
 import React from "react";
+import styled from "styled-components";
 
 export const SearchBox = () => (
-  <form className="p-search-box" action="/search">
+  <Form className="p-search-box" action="/search">
     <input
       type="search"
       className="p-search-box__input"
@@ -15,5 +16,9 @@ export const SearchBox = () => (
     <button type="submit" className="p-search-box__button" alt="search">
       <i className="p-icon--search" />
     </button>
-  </form>
+  </Form>
 );
+
+const Form = styled.form`
+  margin-bottom: 1.5rem;
+`;
