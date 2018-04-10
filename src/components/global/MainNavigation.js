@@ -4,15 +4,15 @@ import {
   NavigationBanner,
   NavigationLink
 } from "vanilla-framework-react";
+import logo from "../../assets/logo.svg";
 
 export const MainNavigation = () => (
   <Navigation>
     <NavigationBanner
       href="#"
       logo={{
-        src:
-          "https://assets.ubuntu.com/v1/d96d86b5-vanilla_black-orange_hex.svg",
-        alt: "Vanilla Framework Logo"
+        src: logo,
+        alt: "Ubuntu Free Culture Showcase Logo"
       }}
     />
     <NavigationLink selected href="#" label="Images" />
