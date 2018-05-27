@@ -26,7 +26,7 @@ DefaultLayout.propTypes = {
   ]).isRequired
 };
 
-const Container = styled.div`
+export const Container = styled.div`
   margin: 0 auto;
   max-width: 64.875rem;
   padding: 1.5rem;
