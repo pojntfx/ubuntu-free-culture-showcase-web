@@ -1,11 +1,13 @@
 import React from "react";
 import logo from "../../assets/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 export const MainNavigation = () => (
-  <header id="navigation" className="p-navigation">
+  <StickyTopNav id="navigation" className="p-navigation">
     <div className="p-navigation__banner">
-      <div className="p-navigation__logo">
+      <LogoWrapper className="p-navigation__logo">
         <Link to="/">
           <img
             className="p-navigation__image"
@@ -13,7 +15,7 @@ export const MainNavigation = () => (
             alt="Ubuntu Free Culture Showcase Logo"
           />
         </Link>
-      </div>
+      </LogoWrapper>
       <a href="#navigation" className="p-navigation__toggle--open" title="menu">
         Menu
       </a>
@@ -30,19 +32,40 @@ export const MainNavigation = () => (
         <a href="#main-content">Jump to main content</a>
       </span>
       <ul className="p-navigation__links" role="menu">
-        <li className="p-navigation__link is-selected" role="menuitem">
-          <Link to="/">Images</Link>
-        </li>
-        <li className="p-navigation__link" role="menuitem">
-          <Link to="/audio">Audio</Link>
-        </li>
-        <li className="p-navigation__link" role="menuitem">
-          <Link to="/video">Video</Link>
-        </li>
-        <li className="p-navigation__link" role="menuitem">
-          <Link to="/sign-in">Sign in</Link>
-        </li>
+        <NavItem to="/" title="Images" />
+        <NavItem to="/audio" title="Audio" />
+        <NavItem to="/videos" title="Video" />
+        <NavItem to="/sign-in" title="Sign in" />
       </ul>
     </nav>
-  </header>
+  </StickyTopNav>
 );
+
+const NavItem = ({ to, title, ...otherProps }) => (
+  <Route path={to} {...otherProps}>
+    {({ match }) => (
+      <li
+        className={`p-navigation__link ${match ? "is-selected" : null}`}
+        role="menuitem"
+      >
+        <Link to={to}>{title}</Link>
+      </li>
+    )}
+  </Route>
+);
+
+NavItem.propTypes = {
+  to: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
+};
+
+const StickyTopNav = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+`;
+
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
