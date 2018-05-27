@@ -1,9 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Start } from "./routes/Start";
+import { Detail } from "./routes/Detail";
 
 export const Routes = () => (
   <Router>
-    <Route exact path="/" component={Start} />
+    <Switch>
+      <Route exact path="/" component={Start} />
+      <Route exact path="/detail/:id" component={Detail} />
+    </Switch>
   </Router>
 );
