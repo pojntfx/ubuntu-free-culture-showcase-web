@@ -10,6 +10,7 @@ import {
 import styled from "styled-components";
 import screenshot from "../../assets/screenshot-laptop-header.png";
 import bionicWallpaper from "../../assets/ubuntu-bionic-wallpaper.jpg";
+import { Container } from "../../layouts/DefaultLayout";
 
 export const CurrentHeader = props => (
   <HeaderTemplate
@@ -60,28 +61,39 @@ export const HeaderTemplate = ({
       </ResponsiveStripRowWrapper>
     </Strip>
   ) : (
-    <Strip>
-      <ResponsiveStripRowWrapper fullHeight={fullHeight}>
+    <TopContainer>
+      <Notification>
         <div className="row u-vertically-center">
           <StripColumn size={8}>
-            <h2>{title}</h2>
-            <h3>{subTitle}</h3>
+            <h3>{title}</h3>
+            <h4>{subTitle}</h4>
+            <h5>{description}</h5>
           </StripColumn>
           <div className="col-4 u-align--right">
             <SmallerStripButton positive value={buttonText} />
           </div>
         </div>
-      </ResponsiveStripRowWrapper>
-    </Strip>
+      </Notification>
+    </TopContainer>
   );
+
+const Notification = styled.div.attrs({ className: "p-notification" })`
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+`;
+
+const TopContainer = styled(Container)`
+  padding-bottom: 0 !important;
+  & > .p-notification {
+    margin-bottom: 0 !important;
+  }
+`;
 
 const ResponsiveStripRowWrapper = styled.div`
   & > div {
     display: flex;
     ${({ fullHeight }) =>
-      fullHeight
-        ? "flex-direction: column-reverse"
-        : "flex-direction: column"};
+      fullHeight ? "flex-direction: column-reverse" : "flex-direction: column"};
     & > .col-5 {
       display: flex;
       align-items: center;

@@ -14,7 +14,11 @@ import { CurrentHeader } from "../global/Header";
 
 export const Detail = () => (
   <DefaultLayout header={<CurrentHeader />}>
-    <TopBar title="Submission" author="Max Mustermann" name="submission-snap" />
+    <TopBar
+      title="A Good Start"
+      author="Max Mustermann"
+      name="submission-snap"
+    />
     <MutedHeading>Primary Image</MutedHeading>
     <SubmissionFirstImage src="https://picsum.photos/960/540" />
     <div className="grid">
