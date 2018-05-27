@@ -1,120 +1,25 @@
 import React from "react";
-import { Strip, StripRow } from "vanilla-framework-react";
-import styled from "styled-components";
+import { List, ListItem, Image } from "vanilla-framework-react";
+import PropTypes from "prop-types";
 
 export const FeedCollection = () => (
-  <Grid>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/500",
-        colour: "dark"
-      }}
-      style={{ gridGrowEnd: "span 3", gridColumnEnd: "span 2" }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-    <Strip
-      image={{
-        src: "http://placekitten.com/g/600/300",
-        colour: "dark"
-      }}
-    >
-      <StripRow>
-        <p>This is an image Strip with a dark background</p>
-      </StripRow>
-    </Strip>
-  </Grid>
+  <List modifier="split">
+    <PreviewImage src="http://placekitten.com/g/200/200" />
+    <PreviewImage src="http://placekitten.com/g/234/200" />
+    <PreviewImage src="http://placekitten.com/g/500/200" />
+    <PreviewImage src="http://placekitten.com/g/356/325" />
+    <PreviewImage src="http://placekitten.com/g/243/200" />
+  </List>
 );
 
-const Grid = styled.div`
-  padding-bottom: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 10px;
-  @media (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
+const PreviewImage = ({ src }) => (
+  <a href={src}>
+    <ListItem>
+      <Image bordered shadowed src={src} style={{ width: "100%" }} />
+    </ListItem>
+  </a>
+);
+
+PreviewImage.propTypes = {
+  src: PropTypes.string.isRequired
+};

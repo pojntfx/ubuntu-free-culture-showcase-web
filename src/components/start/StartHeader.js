@@ -33,7 +33,7 @@ export const StartHeader = ({
           <h3>{subTitle}</h3>
           <h5>{description}</h5>
           <p>
-            <Button positive value={buttonText} />
+            <StripButton positive value={buttonText} />
           </p>
         </StripColumn>
         <StripColumn size={5}>
@@ -64,6 +64,10 @@ const ResponsiveStripRowWrapper = styled.div`
       color: "#ffffff";
     }
   }
+`;
+
+const StripButton = styled(Button)`
+  margin-top: 1rem !important;
 `;
 
 StartHeader.propTypes = {
