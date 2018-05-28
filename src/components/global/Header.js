@@ -87,6 +87,7 @@ const TopContainer = styled(Container)`
   & > .p-notification {
     margin-bottom: 0 !important;
   }
+  margin-top: 2rem;    
 `;
 
 const ResponsiveStripRowWrapper = styled.div`

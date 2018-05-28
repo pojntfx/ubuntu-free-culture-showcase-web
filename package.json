@@ -9,12 +9,14 @@
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
+    "serve": "^6.5.8",
     "vanilla-framework": "^1.7.1",
     "vanilla-framework-react": "^0.1.3"
   },
   "scripts": {
-    "dev": "npm-run-all -p watch-css start",
-    "start": "react-scripts start",
+    "dev": "npm-run-all -p watch-css start-dev",
+    "start": "serve -s build",
+    "start-dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
@@ -41,9 +43,9 @@
     "video"
   ],
   "author": "Felicitas Pojtinger",
-  "license": "GPL-3.0",
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web/issues"
   },
-  "homepage": "https://github.com/pojntfx/ubuntu-free-culture-showcase-frontend-web#readme"
+  "homepage": "/"
 }
