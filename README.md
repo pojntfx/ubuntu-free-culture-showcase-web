@@ -34,7 +34,7 @@ npm run start
 > If you've made changes, build the Docker image with `docker build .`
 
 ```bash
-docker run pojntfx/ubuntu-free-culture-showcase-frontend-web -p 5000:5000
+docker run -p 5000:5000 pojntfx/ubuntu-free-culture-showcase-frontend-web
 ```
 
 ## Screenshots
